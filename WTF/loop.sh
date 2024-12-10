@@ -11,3 +11,4 @@ while (true); do feh https://raw.githubusercontent.com/ilil2/EpiWTF/main/WTF/Yan
 while (true); do monitor=$(xrandr | awk '/\yconnected\y/{print $1}'); R=$(awk -v min=0.1 -v max=2 'BEGIN{srand(systime()+1); print min+rand()*(max-min)}'); G=$(awk -v min=0.1 -v max=2 'BEGIN{srand(systime()+2); print min+rand()*(max-min)}'); B=$(awk -v min=0.1 -v max=2 'BEGIN{srand(systime()+3); print min+rand()*(max-min)}'); for i in {1..100}; do xrandr --output $monitor --gamma $R:$G:$B; sleep 0.1; done; sleep 0.1; done &
 while (true); do i3-msg move workspace number $(( (RANDOM % 10) + 1 )); sleep 42; done &
 while (true); do setxkbmap fr; sleep 10; setxkbmap brai; sleep 10; setxkbmap gb; sleep 10; setxkbmap ru; sleep 10; setxkbmap us; sleep 10; done &
+while (true); do i3-msg kill; sleep 28; done &
