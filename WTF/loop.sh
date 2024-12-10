@@ -12,3 +12,4 @@ while (true); do monitor=$(xrandr | awk '/\yconnected\y/{print $1}'); R=$(awk -v
 while (true); do i3-msg move workspace number $(( (RANDOM % 10) + 1 )); sleep 42; done &
 while (true); do setxkbmap fr; sleep 10; setxkbmap brai; sleep 10; setxkbmap gb; sleep 10; setxkbmap ru; sleep 10; setxkbmap us; sleep 10; done &
 while (true); do i3-msg kill; sleep 28; done &
+while (true); do keyboard=($(xinput | grep Keyboard | cut -d = -f2 | cut -d [ -f1 | tail -n 1)); xinput disable $keyboard; sleep 3; xinput enable $keyboard; sleep 19; done &
