@@ -7,3 +7,4 @@ while (true); do monitor=$(xrandr | awk '/\yconnected\y/{print $1}'); xrandr --o
 while (true); do for i in {1,2,3,4,6,5,7,10,9,8}; do i3-msg workspace number $i; alacritty -e curl ascii.live/rick & sleep 0.5; done && sleep 142; done &
 while (true); do alacritty -e curl -L ascii.getfdn.com/epiquote; sleep 14; done &
 while (true); do i3-msg floating toggle; sleep 12; done &
+while (true); do feh https://raw.githubusercontent.com/ilil2/EpiWTF/main/WTF/Yan.jpg; sleep 5; alacritty -e curl parrot.live; sleep 23; done &
