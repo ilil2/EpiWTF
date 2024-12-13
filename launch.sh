@@ -1,10 +1,8 @@
-i3-nagbar -t warning -m "1"
 while [ "$(/nix/store/*xprintidle*/bin/xprintidle)" -le "10000" ]
 do
 	sleep 0.1
 done
 
-i3-nagbar -t warning -m "2"
 while [ "$(/nix/store/*xprintidle*/bin/xprintidle)" -ge "10000" ]
 do
 	sleep 0.1
